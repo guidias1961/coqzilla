@@ -1,8 +1,8 @@
 // Variables - Easy to update
 const PUMP_URL = "https://pump.tires";     // pump.tires platform
 const CHART_URL = "#";                     // Chart when available
-const TELEGRAM_URL = "#";                  // Telegram group
-const TWITTER_URL = "#";                   // Twitter/X profile
+const TELEGRAM_URL = "https://t.me/COQZPLS";                  // Telegram group
+const TWITTER_URL = "https://x.com/COQZPLS";                   // Twitter/X profile
 
 // Global state
 let coqPowerCount = parseInt(localStorage.getItem('coqPower') || '0');
