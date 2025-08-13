@@ -12,9 +12,9 @@
   "use strict";
 
   /* ---------- Config: update here ---------- */
-  const CONTRACT_ADDRESS = "0x0000000000000000000000000000000000000000";
-  const BUY_URL = "#";
-  const CHART_URL = "#";
+  const CONTRACT_ADDRESS = "0x92157F0F9E1C535e3B5a6F541Ab4AfFB1c6b4238";
+  const BUY_URL = "https://pump.tires/token/0x92157F0F9E1C535e3B5a6F541Ab4AfFB1c6b4238";
+  const CHART_URL = "https://pump.tires/token/0x92157F0F9E1C535e3B5a6F541Ab4AfFB1c6b4238";
   const TELEGRAM_URL = "https://t.me/COQZPLS";
   const TWITTER_URL = "https://x.com/COQZPLS";
 
