@@ -291,4 +291,32 @@
     init();
   }
 })();
+// HERO VIDEO: autoplay robusto + fallback de interação
+document.addEventListener('DOMContentLoaded', () => {
+  const v = document.getElementById('coq-video');
+  if (!v) return;
+
+  v.muted = true;           // requerido para autoplay
+  v.setAttribute('muted', '');
+  v.playsInline = true;     // iOS
+  v.autoplay = true;
+  v.loop = true;
+
+  const tryPlay = () => v.play().catch(() => {});
+  if (v.readyState >= 2) tryPlay();
+  else v.addEventListener('canplay', tryPlay, { once: true });
+
+  // Desbloqueia autoplay no primeiro gesto do usuário (mobile)
+  ['touchstart','click','keydown','scroll'].forEach(evt => {
+    window.addEventListener(evt, tryPlay, { once: true, passive: true });
+  });
+});
+
+// (Opcional) se ainda usar GSAP, mude o alvo para o vídeo:
+if (typeof gsap !== 'undefined') {
+  const el = document.querySelector('#coq-video');
+  if (el) {
+    gsap.to('#coq-video', { y: 10, rotation: 2, duration: 3, ease: "sine.inOut", yoyo: true, repeat: -1 });
+  }
+}
 

@@ -1201,4 +1201,20 @@ body { overflow-x: hidden; }
   object-fit: cover; /* use contain se quiser sem crop */
   display: block;
 }
+/* HERO VIDEO: força visibilidade */
+.hero-image { position: relative; z-index: 1; }
+
+.hero-image video.coq-hero {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: min(80vh, 800px);
+  object-fit: contain;
+  mix-blend-mode: normal !important; /* override */
+  filter: none !important;           /* remove drop-shadow no vídeo */
+  background: transparent;
+}
+
+/* Se existir <img> fallback no hero, esconda */
+.hero-image img { display: none !important; }
 
