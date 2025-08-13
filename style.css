@@ -1194,4 +1194,11 @@ body { overflow-x: hidden; }
   background: transparent;
   border: 0;
 }
+/* HERO video hard-fix */
+.hero-image { min-height: clamp(320px, 60vh, 820px); }
+.hero-image video.coq-hero {
+  mix-blend-mode: normal !important;
+  object-fit: cover; /* use contain se quiser sem crop */
+  display: block;
+}
 
