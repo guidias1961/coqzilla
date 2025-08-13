@@ -1179,3 +1179,19 @@ img, svg, video { max-width: 100%; height: auto; }
 /* Garantir que nada vaze lateralmente mesmo com animações */
 body { overflow-x: hidden; }
 
+.hero-image {
+  position: relative;
+  width: 100%;
+  min-height: clamp(280px, 58vh, 720px);
+  overflow: hidden;
+}
+
+.coq-hero {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain; /* troque para 'cover' se quiser ocupar tudo */
+  background: transparent;
+  border: 0;
+}
+

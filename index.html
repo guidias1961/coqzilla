@@ -80,9 +80,23 @@
                         <a href data-url="twitter" class="btn btn-secondary">FOLLOW TWITTER</a>
                     </div>
                 </div>
-                <div class="hero-image">
-                    <img src="./video.mp4" alt="COQZILLA - The Ultimate Kaiju Rooster" class="coq-hero" id="coq-hero">
-                </div>
+<div class="hero-image">
+  <video
+    id="coq-video"
+    class="coq-hero"
+    playsinline
+    autoplay
+    muted
+    loop
+    preload="auto"
+    poster="./coqzilla-a.png"
+  >
+    <source src="./video.mp4" type="video/mp4" />
+    <!-- Fallback -->
+    <img src="./coqzilla-a.png" alt="COQZILLA - The Ultimate Kaiju Rooster">
+  </video>
+</div>
+
             </div>
         </div>
     </section>
