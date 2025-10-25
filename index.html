@@ -1,342 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COQZILLA ($COQZ) - Big COQ Energy on PulseChain</title>
-    <meta name="description" content="The ultimate kaiju rooster token on PulseChain. COQZILLA stomps through gas fees to bring you pure COQ power!">
-    
-    <!-- SEO & Social -->
-    <meta property="og:title" content="COQZILLA ($COQZ) - Big COQ Energy on PulseChain">
-    <meta property="og:description" content="The ultimate kaiju rooster token on PulseChain. COQZILLA stomps through gas fees to bring you pure COQ power!">
-    <meta property="og:image" content="./coqzilla-a.png">
-    <meta property="og:url" content="">
-    <meta property="og:type" content="website">
-    
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="COQZILLA ($COQZ) - Big COQ Energy on PulseChain">
-    <meta name="twitter:description" content="The ultimate kaiju rooster token on PulseChain. COQZILLA stomps through gas fees to bring you pure COQ power!">
-    <meta name="twitter:image" content="./coqzilla-a.png">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='24' font-size='24'>🐔</text></svg>">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-    
-    <!-- Preload critical images -->
-    <link rel="preload" href="./coqzilla-a.png" as="image">
-    <link rel="preload" href="./video.mp4" as="video" type="video/mp4">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>COQZILLA ($COQZ) - Big COQ Energy on PulseChain</title>
+  <meta name="description" content="The ultimate kaiju rooster token on PulseChain. COQZILLA stomps through gas fees to bring you pure COQ power!" />
 
-    
-    <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <!-- SEO & Social -->
+  <meta property="og:title" content="COQZILLA ($COQZ) - Big COQ Energy on PulseChain" />
+  <meta property="og:description" content="The ultimate kaiju rooster token on PulseChain. COQZILLA stomps through gas fees to bring you pure COQ power!" />
+  <meta property="og:image" content="./coqzilla-a.png" />
+  <meta property="og:url" content="" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="COQZILLA ($COQZ) - Big COQ Energy on PulseChain" />
+  <meta name="twitter:description" content="The ultimate kaiju rooster token on PulseChain. COQZILLA stomps through gas fees to bring you pure COQ power!" />
+  <meta name="twitter:image" content="./coqzilla-a.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='24' font-size='24'>🐔</text></svg>">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Preload critical assets -->
+  <link rel="preload" href="./coqzilla-a.png" as="image" />
+  <link rel="preload" href="./video.mp4" as="video" type="video/mp4" />
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <!-- Ethers.js para o Burn Altar -->
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js" defer></script>
 </head>
 <body>
-    <!-- Animated Background -->
-    <div class="bg-container">
-        <div class="city-skyline"></div>
-        <div class="particles"></div>
+  <!-- Animated Background -->
+  <div class="bg-container">
+    <div class="city-skyline"></div>
+    <div class="particles"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav-sticky" id="nav">
+    <div class="container nav-content">
+      <div class="logo">
+        <span class="logo-text">COQZILLA</span>
+        <span class="logo-ticker">$COQZ</span>
+      </div>
+      <div class="nav-links">
+        <a href="#lore" class="nav-link">Lore</a>
+        <a href="#how-to-buy" class="nav-link">Buy</a>
+        <a href="#tokenomics" class="nav-link">Tokenomics</a>
+        <a href="#burn-altar" class="nav-link">Burn Altar</a>
+        <a href data-url="pump" class="btn btn-primary nav-cta">Buy on pump.tires</a>
+        <a href data-url="chart" class="nav-icon" title="Chart">📈</a>
+        <a href data-url="telegram" class="nav-icon" title="Telegram">💬</a>
+        <a href data-url="twitter" class="nav-icon" title="Twitter">🐦</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">UNLEASH BIG COQ ENERGY ON PULSECHAIN</h1>
+          <div class="hero-badges">
+            <span class="ticker-badge">$COQZ</span>
+            <div class="contract-chip">
+              <span data-contract-short>Contract</span>
+              <button class="copy-btn" data-copy="contract" title="Copy Contract">📋</button>
+            </div>
+          </div>
+          <div class="hero-ctas">
+            <a href data-url="pump" class="btn btn-primary">BUY ON PUMP.TIRES</a>
+            <a href data-url="telegram" class="btn btn-secondary">JOIN TELEGRAM</a>
+            <a href data-url="twitter" class="btn btn-secondary">FOLLOW TWITTER</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <video id="coq-video" class="coq-hero" playsinline autoplay muted loop preload="auto">
+            <source src="./video.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lore -->
+  <section class="lore section-dark" id="lore">
+    <div class="container">
+      <h2 class="section-title">THE LEGEND OF COQZILLA</h2>
+      <div class="lore-content">
+        <div class="lore-text">
+          <p>Deep in the blockchain underworld, where gas fees tower like skyscrapers and retail traders scream in terror, a legendary beast awakens. COQZILLA, the ultimate kaiju rooster, has risen from the depths of DeFi hell to stomp across PulseChain with earth-shaking force!</p>
+          <p>Born from the fury of a thousand rugged projects and powered by pure COQ energy, this beast does not just moon. It demolishes entire city blocks of weak hands. When COQZILLA roars, the whole blockchain trembles.</p>
+          <p>Now nesting permanently on PulseChain, this legendary cock delivers atomic powered gains while keeping fees lower than a snake's belly. Prepare for total market domination. 🐔⚡</p>
+        </div>
+        <div class="coq-facts">
+          <h3>COQ FACTS</h3>
+          <ul>
+            <li>🏔️ Height: 350 feet of pure cock power</li>
+            <li>⚡ Energy Source: Concentrated meme magic</li>
+            <li>🔥 Signature Move: The Atomic Peck</li>
+            <li>🏆 Weakness: None detected</li>
+            <li>📍 Last Seen: Stomping through DeFi</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How to Buy -->
+  <section class="how-to-buy" id="how-to-buy">
+    <div class="container">
+      <h2 class="section-title">HOW TO UNLEASH THE COQ</h2>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-icon">🔗</div>
+          <h3>Connect Wallet</h3>
+          <p>Go to pump.tires and connect your PulseChain wallet. Sign the message when prompted.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-icon">💎</div>
+          <h3>Get PLS</h3>
+          <p>Load up on PLS tokens to fuel your COQZILLA purchase on the bonding curve.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-icon">📈</div>
+          <h3>Trade on Curve</h3>
+          <p>Find COQZILLA and buy on the bonding curve. Price increases as more is bought.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-icon">🚀</div>
+          <h3>Ride to PulseX</h3>
+          <p>When 200M PLS is reached, COQZILLA graduates to PulseX with locked liquidity.</p>
+        </div>
+      </div>
+      <div class="pump-info">
+        <div class="pump-card">
+          <h3>🔥 pump.tires Launch</h3>
+          <p>COQZILLA launches on pump.tires with fair bonding curve mechanics. No coding required, just pure COQ energy.</p>
+          <div class="pump-features">
+            <span class="feature-tag">✅ Bonding Curve</span>
+            <span class="feature-tag">✅ Auto PulseX Launch</span>
+            <span class="feature-tag">✅ Locked Liquidity</span>
+            <span class="feature-tag">✅ Burn Mechanism</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tokenomics -->
+  <section class="tokenomics section-dark" id="tokenomics">
+    <div class="container">
+      <h2 class="section-title">COQ-ONOMICS</h2>
+    <div class="tokenomics-grid">
+      <div class="token-card">
+        <h3>Total Supply</h3>
+        <div class="token-value">1,000,000,000</div>
+        <div class="token-label">$COQZ Tokens</div>
+      </div>
+      <div class="token-card">
+        <h3>Tax Structure</h3>
+        <div class="token-value">0%</div>
+        <div class="token-label">Buy/Sell Tax</div>
+      </div>
+      <div class="token-card">
+        <h3>Liquidity</h3>
+        <div class="token-value">Locked</div>
+        <div class="token-label">100% Secure</div>
+      </div>
+      <div class="token-card">
+        <h3>Ownership</h3>
+        <div class="token-value">Renounced</div>
+        <div class="token-label">Community Driven</div>
+      </div>
     </div>
 
-    <!-- Navigation -->
-    <nav class="nav-sticky" id="nav">
-        <div class="container nav-content">
-            <div class="logo">
-                <span class="logo-text">COQZILLA</span>
-                <span class="logo-ticker">$COQZ</span>
-            </div>
-            <div class="nav-links">
-                <a href="#lore" class="nav-link">Lore</a>
-                <a href="#how-to-buy" class="nav-link">Buy</a>
-                <a href="#tokenomics" class="nav-link">Tokenomics</a>
-                <a href data-url="pump" class="btn btn-primary nav-cta">Buy on pump.tires</a>
-                <a href data-url="chart" class="nav-icon" title="Chart">📈</a>
-                <a href data-url="telegram" class="nav-icon" title="Telegram">💬</a>
-                <a href data-url="twitter" class="nav-icon" title="Twitter">🐦</a>
-            </div>
+    <div class="power-levels">
+      <h3>COQZILLA POWER LEVELS</h3>
+      <div class="power-bars">
+        <div class="power-bar">
+          <span class="power-label">🥚 Hatch</span>
+          <div class="power-progress"><div class="power-fill" style="width:100%"></div></div>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">UNLEASH BIG COQ ENERGY ON PULSECHAIN</h1>
-                    <div class="hero-badges">
-                        <span class="ticker-badge">$COQZ</span>
-                        <div class="contract-chip">
-                            <span data-contract-short>Contract</span>
-                            <button class="copy-btn" data-copy="contract" title="Copy Contract">📋</button>
-                        </div>
-                    </div>
-                    <div class="hero-ctas">
-                        <a href data-url="pump" class="btn btn-primary">BUY ON PUMP.TIRES</a>
-                        <a href data-url="telegram" class="btn btn-secondary">JOIN TELEGRAM</a>
-                        <a href data-url="twitter" class="btn btn-secondary">FOLLOW TWITTER</a>
-                    </div>
-                </div>
-<div class="hero-image">
-  <video
-    id="coq-video"
-    class="coq-hero"
-    playsinline
-    autoplay
-    muted
-    loop
-    preload="auto"
-  >
-    <source src="./video.mp4" type="video/mp4">
-  </video>
-</div>
-
-            </div>
+        <div class="power-bar">
+          <span class="power-label">🦶 Stomp</span>
+          <div class="power-progress"><div class="power-fill" style="width:75%"></div></div>
         </div>
-    </section>
-
-    <!-- Lore Section -->
-    <section class="lore section-dark" id="lore">
-        <div class="container">
-            <h2 class="section-title">THE LEGEND OF COQZILLA</h2>
-            <div class="lore-content">
-                <div class="lore-text">
-                    <p>Deep in the blockchain underworld, where gas fees tower like skyscrapers and retail traders scream in terror, a legendary beast awakens. COQZILLA — the ultimate kaiju rooster — has risen from the depths of DeFi hell to stomp across PulseChain with earth-shaking force!</p>
-                    
-                    <p>Born from the fury of a thousand rugged projects and powered by pure COQ energy, this magnificent beast doesn't just moon — it demolishes entire city blocks of weak hands. When COQZILLA roars, the whole blockchain trembles.</p>
-                    
-                    <p>Now nesting permanently on PulseChain, this legendary cock delivers atomic-powered gains while keeping fees lower than a snake's belly. Prepare for total market domination! 🐔⚡</p>
-                </div>
-                <div class="coq-facts">
-                    <h3>COQ FACTS</h3>
-                    <ul>
-                        <li>🏔️ Height: 350 feet of pure cock power</li>
-                        <li>⚡ Energy Source: Concentrated meme magic</li>
-                        <li>🔥 Signature Move: The Atomic Peck</li>
-                        <li>🏆 Weakness: None detected</li>
-                        <li>📍 Last Seen: Stomping through DeFi</li>
-                    </ul>
-                </div>
-            </div>
+        <div class="power-bar">
+          <span class="power-label">🔥 Roar</span>
+          <div class="power-progress"><div class="power-fill" style="width:50%"></div></div>
         </div>
-    </section>
-
-    <!-- How to Buy -->
-    <section class="how-to-buy" id="how-to-buy">
-        <div class="container">
-            <h2 class="section-title">HOW TO UNLEASH THE COQ</h2>
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-icon">🔗</div>
-                    <h3>Connect Wallet</h3>
-                    <p>Go to pump.tires and connect your PulseChain wallet. Sign the message when prompted.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-icon">💎</div>
-                    <h3>Get PLS</h3>
-                    <p>Load up on PLS tokens to fuel your COQZILLA purchase on the bonding curve.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-icon">📈</div>
-                    <h3>Trade on Curve</h3>
-                    <p>Find COQZILLA and buy on the bonding curve. Price increases as more is bought!</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-icon">🚀</div>
-                    <h3>Ride to PulseX</h3>
-                    <p>When 200M PLS is reached, COQZILLA graduates to PulseX with locked liquidity!</p>
-                </div>
-            </div>
-            <div class="pump-info">
-                <div class="pump-card">
-                    <h3>🔥 pump.tires Launch</h3>
-                    <p>COQZILLA launches on pump.tires with fair bonding curve mechanics. No coding required, just pure COQ energy!</p>
-                    <div class="pump-features">
-                        <span class="feature-tag">✅ Bonding Curve</span>
-                        <span class="feature-tag">✅ Auto PulseX Launch</span>
-                        <span class="feature-tag">✅ Locked Liquidity</span>
-                        <span class="feature-tag">✅ Burn Mechanism</span>
-                    </div>
-                </div>
-            </div>
+        <div class="power-bar">
+          <span class="power-label">👑 Dominate</span>
+          <div class="power-progress"><div class="power-fill" style="width:25%"></div></div>
         </div>
-    </section>
-
-    <!-- Tokenomics -->
-    <section class="tokenomics section-dark" id="tokenomics">
-        <div class="container">
-            <h2 class="section-title">COQ-ONOMICS</h2>
-            <div class="tokenomics-grid">
-                <div class="token-card">
-                    <h3>Total Supply</h3>
-                    <div class="token-value">1,000,000,000</div>
-                    <div class="token-label">$COQZ Tokens</div>
-                </div>
-                <div class="token-card">
-                    <h3>Tax Structure</h3>
-                    <div class="token-value">0%</div>
-                    <div class="token-label">Buy/Sell Tax</div>
-                </div>
-                <div class="token-card">
-                    <h3>Liquidity</h3>
-                    <div class="token-value">Locked</div>
-                    <div class="token-label">100% Secure</div>
-                </div>
-                <div class="token-card">
-                    <h3>Ownership</h3>
-                    <div class="token-value">Renounced</div>
-                    <div class="token-label">Community Driven</div>
-                </div>
-            </div>
-            <div class="power-levels">
-                <h3>COQZILLA POWER LEVELS</h3>
-                <div class="power-bars">
-                    <div class="power-bar">
-                        <span class="power-label">🥚 Hatch</span>
-                        <div class="power-progress">
-                            <div class="power-fill" style="width: 100%"></div>
-                        </div>
-                    </div>
-                    <div class="power-bar">
-                        <span class="power-label">🦶 Stomp</span>
-                        <div class="power-progress">
-                            <div class="power-fill" style="width: 75%"></div>
-                        </div>
-                    </div>
-                    <div class="power-bar">
-                        <span class="power-label">🔥 Roar</span>
-                        <div class="power-progress">
-                            <div class="power-fill" style="width: 50%"></div>
-                        </div>
-                    </div>
-                    <div class="power-bar">
-                        <span class="power-label">👑 Dominate</span>
-                        <div class="power-progress">
-                            <div class="power-fill" style="width: 25%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Roadmap -->
-    <section class="roadmap" id="roadmap">
-        <div class="container">
-            <h2 class="section-title">THE KAIJU MARCH</h2>
-            <div class="roadmap-timeline">
-                <div class="roadmap-item completed">
-                    <div class="roadmap-icon">🥚</div>
-                    <h3>Phase 1: The Hatching</h3>
-                    <p>Launch on PulseChain, build the nest, gather the flock</p>
-                </div>
-                <div class="roadmap-item active">
-                    <div class="roadmap-icon">📈</div>
-                    <h3>Phase 2: First Stomp</h3>
-                    <p>1000 holders, listings, community growth, meme domination</p>
-                </div>
-                <div class="roadmap-item">
-                    <div class="roadmap-icon">🔥</div>
-                    <h3>Phase 3: Atomic Roar</h3>
-                    <p>CEX listings, partnerships, destroy the competition</p>
-                </div>
-                <div class="roadmap-item">
-                    <div class="roadmap-icon">👑</div>
-                    <h3>Phase 4: Total Domination</h3>
-                    <p>Rule the blockchain, cosmic COQ energy unleashed</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="faq" id="faq">
-        <div class="container">
-            <h2 class="section-title">FREQUENTLY ASKED COCKS</h2>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3>What is COQZILLA?</h3>
-                    <p>The most powerful kaiju rooster token on PulseChain! Pure meme energy meets DeFi innovation.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>How does pump.tires work?</h3>
-                    <p>Fair launch on bonding curve! Price increases as more is bought. At 200M PLS, auto-launches to PulseX with locked liquidity!</p>
-                </div>
-                <div class="faq-item">
-                    <h3>When moon?</h3>
-                    <p>COQZILLA doesn't moon — it demolishes planets. Buckle up for the ride! 🚀</p>
-                </div>
-                <div class="faq-item">
-                    <h3>How to join the army?</h3>
-                    <p>Buy $COQZ on pump.tires, join our Telegram, and prepare for total blockchain domination!</p>
-                </div>
-            </div>
-            <div class="disclaimer">
-                <p><strong>DISCLAIMER:</strong> This is a meme token. Not financial advice. DYOR and only invest what you can afford to lose. COQZILLA is not responsible for any financial ruin... but we'll celebrate your gains! 🐔</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer section-dark">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>COQZILLA</h3>
-                    <p>The ultimate kaiju rooster bringing big COQ energy to PulseChain!</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Links</h4>
-                    <a href data-url="pump">Buy on pump.tires</a>
-                    <a href data-url="chart">Chart</a>
-                    <a href data-url="telegram">Telegram</a>
-                    <a href data-url="twitter">Twitter</a>
-                </div>
-                <div class="footer-contract">
-                    <h4>pump.tires Launch</h4>
-                    <p>Fair bonding curve launch with automatic PulseX graduation at 200M PLS!</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 COQZILLA. Built with 💜 for the PulseChain community.</p>
-                <p>Powered by PulseChain - The fastest, cheapest blockchain ever created.</p>
-                <div class="coq-counter">
-                    COQ POWER: <span id="coq-power-display">0</span>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Lightbox Modal -->
-    <div class="lightbox" id="lightbox">
-        <div class="lightbox-content">
-            <img src="" alt="" id="lightbox-img">
-            <button class="lightbox-close" id="lightbox-close">&times;</button>
-        </div>
+      </div>
     </div>
-
-    <!-- Easter Egg Banner -->
-    <div class="easter-egg-banner" id="easter-egg">
-        <div class="container">
-            <p>🥚 <strong>EASTER EGG UNLOCKED!</strong> Airdrop? No. Air-COQ! 🐔</p>
-            <button id="close-easter-egg">&times;</button>
-        </div>
     </div>
+  </section>
 
-    <!-- Roar Mode Indicator -->
-    <div class="roar-mode-indicator" id="roar-indicator">
-        <div class="roar-content">
-            <span>🔥 ROAR MODE ACTIVATED! 🔥</span>
-            <button id="exit-roar">Exit</button>
+  <!-- COQ Burn Altar -->
+  <section class="section-dark burn-altar" id="burn-altar">
+    <div class="container">
+      <h2 class="section-title">COQ BURN ALTAR</h2>
+      <p class="altar-subtitle">Feed the COQ, strengthen the chain.</p>
+
+      <div class="altar-grid">
+        <!-- Painel de interação -->
+        <div class="altar-panel">
+          <div class="field">
+            <label for="token-address">Token contract (ERC-20)</label>
+            <input id="token-address" type="text" placeholder="0x... token" />
+          </div>
+
+          <div class="field two">
+            <div>
+              <label for="burn-amount">Amount</label>
+              <input id="burn-amount" type="text" placeholder="Ex: 100000" />
+            </div>
+            <div>
+              <label for="burn-decimals">Decimals</label>
+              <input id="burn-decimals" type="number" min="0" max="36" placeholder="auto" />
+            </div>
+          </div>
+
+          <div class="field">
+            <button id="btn-connect" class="btn btn-primary">Connect Wallet</button>
+          </div>
+
+          <div class="field">
+            <button id="btn-burn" class="btn btn-secondary">Send to 0xdead</button>
+          </div>
+
+          <div class="mini">
+            <div>Dead address</div>
+            <code id="dead-addr">0x000000000000000000000000000000000000dEaD</code>
+            <button class="copy-btn" id="copy-dead">Copy</button>
+          </div>
+
+          <div class="token-meta">
+            <div><strong>Token</strong> <span id="meta-name">-</span> <span id="meta-symbol"></span></div>
+            <div><strong>Total supply</strong> <span id="meta-supply">-</span></div>
+            <div><strong>Burned at dead</strong> <span id="meta-burned">-</span> (<span id="meta-burned-pct">-</span>)</div>
+            <div><strong>Circulating proxy</strong> <span id="meta-circ">-</span></div>
+          </div>
+
+          <div class="tx-line" id="last-tx" hidden>
+            <span>Last tx</span>
+            <a id="last-tx-link" href="#" target="_blank" rel="noopener">view</a>
+          </div>
         </div>
-    </div>
 
-    <!-- Scripts -->
-    <script src="script.js"></script>
+        <!-- Visual do altar -->
+        <div class="altar-visual">
+          <div class="roar-stage">
+            <div class="altar-stat">
+              <div class="stat-box">
+                <div class="stat-label">Burned at dead</div>
+                <div class="stat-value" id="stat-burned">0</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-label">Circulating proxy</div>
+                <div class="stat-value" id="stat-circ">0</div>
+              </div>
+            </div>
+            <div class="altar-flames" aria-hidden="true"></div>
+            <div class="altar-slogan">Feed the COQ</div>
+          </div>
+
+          <div class="live-feed">
+            <div class="feed-title">Live burns to 0xdead</div>
+            <ul id="feed-list"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <h2 class="section-title">FREQUENTLY ASKED COCKS</h2>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>What is COQZILLA?</h3>
+          <p>The most powerful kaiju rooster token on PulseChain. Pure meme energy meets DeFi innovation.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How does pump.tires work?</h3>
+          <p>Fair launch on bonding curve. Price increases as more is bought. At 200M PLS, auto launches to PulseX with locked liquidity.</p>
+        </div>
+        <div class="faq-item">
+          <h3>When moon?</h3>
+          <p>COQZILLA does not moon. It demolishes planets. Buckle up. 🚀</p>
+        </div>
+        <div class="faq-item">
+          <h3>How to join the army?</h3>
+          <p>Buy $COQZ on pump.tires, join our Telegram, and prepare for total blockchain domination.</p>
+        </div>
+      </div>
+      <div class="disclaimer">
+        <p><strong>DISCLAIMER:</strong> This is a meme token. Not financial advice. DYOR and only invest what you can afford to lose. COQZILLA is not responsible for losses. We celebrate your wins.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer section-dark">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>COQZILLA</h3>
+          <p>The ultimate kaiju rooster bringing big COQ energy to PulseChain.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Links</h4>
+          <a href data-url="pump">Buy on pump.tires</a>
+          <a href data-url="chart">Chart</a>
+          <a href data-url="telegram">Telegram</a>
+          <a href data-url="twitter">Twitter</a>
+        </div>
+        <div class="footer-contract">
+          <h4>pump.tires Launch</h4>
+          <p>Fair bonding curve launch with automatic PulseX graduation at 200M PLS.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 COQZILLA. Built with 💜 for the PulseChain community.</p>
+        <p>Powered by PulseChain.</p>
+        <div class="coq-counter">COQ POWER: <span id="coq-power-display">0</span></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <img src="" alt="" id="lightbox-img" />
+      <button class="lightbox-close" id="lightbox-close">&times;</button>
+    </div>
+  </div>
+
+  <!-- Roar Mode Indicator -->
+  <div class="roar-mode-indicator" id="roar-indicator">
+    <div class="roar-content">
+      <span>🔥 ROAR MODE ACTIVATED.</span>
+      <button id="exit-roar">Exit</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
 </body>
 </html>
+
